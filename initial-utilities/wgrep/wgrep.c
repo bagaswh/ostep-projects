@@ -7,10 +7,8 @@ void grep(void *ptr, char *term)
     char *lineptr = NULL;
     size_t n = 0;
     while (getline(&lineptr, &n, ptr) != -1)
-    {
         if (strstr(lineptr, term) != NULL)
             printf("%s", lineptr);
-    }
     free(lineptr);
 }
 
